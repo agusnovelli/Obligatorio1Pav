@@ -1,3 +1,6 @@
+#ifndef PAGA_H
+#define PAGA_H
+
 #include <iostream>
 #include "cambio.h"
 #include "moneda.h"
@@ -14,3 +17,5 @@ class Paga {
         Paga a_dolar();
         Paga a_pesos();
 };
+
+#endif

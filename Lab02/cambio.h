@@ -1,3 +1,6 @@
+#ifndef CAMBIO_H
+#define CAMBIO_H
+
 #include <iostream>
 
 using namespace std;
@@ -9,3 +12,4 @@ class Cambio {
         static float a_dolar(float);
 };
 
+#endif

@@ -1,6 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
+#include "empleado.h"
 #include "empresa.h" 
+#include "paga.h"
+#include "moneda.h"
+#include "cambio.h"
 using namespace std;
 
 int main(){
@@ -26,6 +30,7 @@ int main(){
             int edad_emp;
             float monto_paga_emp;
             cout << "1)Fijo.\n2)Jornalero.\nOpcion: ";
+            cin >> opcion;
             cout << "Nombre y apellido del empleado: ";
             cin >> nombre_emp;
             cout << "Cedula de Identidad del empleado: ";
@@ -34,18 +39,19 @@ int main(){
             cin >> edad_emp;
             cout << "Valor hora del empleado: ";
             cin >> monto_paga_emp;
-            Paga paga_emp(monto_paga_emp, uy);
+            // Paga paga_emp(monto_paga_emp, uy);
             while(opcion < 1 and opcion > 2){
                 cout << "Opcion invalida. Seleccione las opcines disponibles.\n";
                 cout << "1)Fijo.\n2)Jornalero.\nOpcion: ";
             }
-            if(opcion == 1)
-                Fijo emp_fijo(nombre_emp, ci_emp, edad_emp, paga_emp);
+            if(opcion == 1){
+                // Fijo emp_fijo(nombre_emp, ci_emp, edad_emp, paga_emp);
+            }
             else{
                 int horas_jorn;
                 cout << "Horas del empleado: ";
                 cin >> horas_jorn;
-                Jornalero emp_jornal(nombre_emp, ci_emp, edad_emp, paga_emp);
+                // Jornalero emp_jornal(nombre_emp, ci_emp, edad_emp, paga_emp);
             }
             break;
         case 3:
