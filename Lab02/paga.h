@@ -1,4 +1,5 @@
 #include <iostream>
+#include "cambio.h"
 #include "moneda.h"
 
 using namespace std;
@@ -10,7 +11,6 @@ class Paga {
     public:
         Paga();
         Paga(float, Moneda);
-        ~Paga();
         Paga a_dolar();
         Paga a_pesos();
 };

@@ -1,8 +1,4 @@
 #include <iostream>
+#include "empleado.h"
 
 using namespace std;
-
-enum Moneda {
-    us,
-    usd,
-};

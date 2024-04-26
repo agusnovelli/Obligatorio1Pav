@@ -5,7 +5,7 @@ using namespace std;
 
 Paga::Paga() {
     monto=0;
-    moneda=us;
+    moneda=uy;
 }
 
 Paga::Paga(float monto, Moneda moneda) {
@@ -13,13 +13,12 @@ Paga::Paga(float monto, Moneda moneda) {
     this->moneda=moneda;
 }
 
-Paga::~Paga() {
-
-}
+// Paga::~Paga() {
+// }
 
 Paga Paga::a_dolar() {
-    if(this->moneda==us) {
-        float cambio = Cambio::a_peso(this->monto);
+    if(this->moneda==uy) {
+        float cambio = Cambio::a_pesos(this->monto);
         return Paga(cambio,moneda);
     }
     else {
