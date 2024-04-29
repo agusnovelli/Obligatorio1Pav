@@ -13,11 +13,8 @@ Paga::Paga(float monto, Moneda moneda) {
     this->moneda=moneda;
 }
 
-// Paga::~Paga() {
-// }
-
 Paga Paga::a_dolar() {
-    if(this->moneda==uy) {
+    if(this->moneda==usd) {
         float cambio = Cambio::a_pesos(this->monto);
         return Paga(cambio,moneda);
     }
@@ -25,4 +22,19 @@ Paga Paga::a_dolar() {
         float cambio = Cambio::a_dolar(this->monto);
         return Paga(cambio,moneda);
     }
+}
+
+Paga Paga::a_pesos() {
+    if(this->moneda==uy) {
+        float cambio = Cambio::a_dolar(this->monto);
+        return Paga(cambio,moneda);
+    }
+    else {
+        float cambio = Cambio::a_pesos(this->monto);
+        return Paga(cambio,moneda);
+    }
+}
+
+float Paga::get_monto(){
+    return monto;
 }

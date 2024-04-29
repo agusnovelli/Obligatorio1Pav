@@ -16,6 +16,7 @@ class Paga {
         Paga(float, Moneda);
         Paga a_dolar();
         Paga a_pesos();
+        float get_monto();
 };
 
 #endif
